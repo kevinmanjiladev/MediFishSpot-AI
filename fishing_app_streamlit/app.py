@@ -45,82 +45,157 @@ st.set_page_config(
 # ------------------------------------------------------------
 # CUSTOM DARK THEME CSS + PREMIUM UI DESIGN
 # ------------------------------------------------------------
+
+
+
 st.markdown("""
     <style>
+      /* Add App Name to top-left header */
+    .stAppHeader::before {
+        content: "MediFishSpot AI";
+        position: absolute;
+        left: 80px;  /* adjust based on sidebar button */
+        top: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white; /* black color */
+        z-index: 9999;
+    }
+    .stAppHeader{
+            background-color:black;
+            }
 
-    /* Global Dark Theme */
+    /* Global Light Theme */
     .stApp {
-        background-color: #0d1117 !important;
-        color: #ffffff !important;
+        background-color: #f4f4f9 !important;
         font-family: 'Segoe UI', sans-serif;
+        color: #222 !important;
     }
 
-    /* Page Titles */
     h1, h2, h3 {
-        color: #58a6ff !important;
+        color: #0a66c2 !important;
+        animation: fadeInDown 1s ease;
     }
 
-    /* 🔥 Force ALL Subheaders to white */
-    .stMarkdown h3, 
-    h3, 
-    .css-10trblm, 
-    .css-1v3fvcr, 
-    .css-ztfqz8, 
-    .css-16idsys {
-        color: #ffffff !important;
+    /* Subheader color */
+    .stMarkdown h3, h3 {
+        color: #333 !important;
     }
 
-    /* Paragraphs & labels */
-    p, label, span {
-        color: #ffffff !important;
-    }
 
-    /* Glass Card */
+    /* -----------------------
+       ✨ Animated Glass Cards
+       ----------------------- */
     .glass-card {
-        background: rgba(22, 27, 34, 0.55);
+        background: rgba(255, 255, 255, 0.6);
         padding: 25px;
-        border-radius: 15px;
-        border: 1px solid #30363d;
-        box-shadow: 0px 4px 20px rgba(0,0,0,0.35);
-        backdrop-filter: blur(8px);
-        transition: 0.3s;
+        border-radius: 18px;
+        border: 1px solid #d0d0d0;
+        box-shadow: 0px 4px 20px rgba(150,150,150,0.2);
+        backdrop-filter: blur(10px);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        animation: fadeIn 1s ease;
     }
+
     .glass-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0px 8px 25px rgba(0,0,0,0.55);
+        transform: translateY(-6px);
+        box-shadow: 0px 10px 30px rgba(100,100,100,0.3);
     }
 
-    /* Sidebar */
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+
+    /* -----------------------
+       ✨ Sidebar Styling
+       ----------------------- */
     [data-testid="stSidebar"] {
-        background-color: #161b22 !important;
-        border-right: 1px solid #30363d;
+        background-color: #ffffff !important;
+        border-right: 1px solid #e0e0e0;
+        animation: fadeIn 1s ease;
     }
 
-    /* Sidebar text forced white */
     [data-testid="stSidebar"] * {
-        color: white !important;
+        color: #333 !important;
+        font-size: 16px !important;
     }
 
-    /* Radio button text white */
-    .css-qrbaxs, .css-1pcexqc, .css-16huue1 {
-        color: white !important;
-    }
-
-    /* Increase spacing between sidebar radio options */
+    /* Radio button options spacing */
     div[role="radiogroup"] > label {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px 0;
         margin-bottom: 6px;
+        transition: 0.3s;
+        
+    }
+    div[role="radiogroup"] > label:hover {
+        transform: translateX(6px);
+        color: #0a66c2 !important;
+        font-weight: bold;
     }
 
-    /* Info box text */
-    .stAlert > div {
+
+    /* -----------------------
+       ✨ Buttons Animated
+       ----------------------- */
+    .stButton>button {
+        background-color: #0a66c2 !important;
         color: white !important;
+        padding: 10px 18px;
+        border-radius: 8px;
+        border: none;
+        transition: 0.3s ease-in-out;
     }
+
+    .stButton>button:hover {
+        background-color: #004182 !important;
+        transform: scale(1.03);
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+    }
+
+
+    /* -----------------------
+       ✨ Input Box Styling
+       ----------------------- */
+    input, textarea {
+        border-radius: 6px !important;
+        border: 1px solid #aaaaaa !important;
+    }
+
+    input:focus, textarea:focus {
+        border: 1px solid #0a66c2 !important;
+        box-shadow: 0px 0px 6px rgba(10,102,194,0.3);
+    }
+    
+            
+        /* Streamlit Alerts Text Color */
+    .stAlert p, 
+    .stAlert div[data-testid="stAlertContentWarning"] p, 
+    .stAlert div[data-testid="stAlertContentError"] p, 
+    .stAlert div[data-testid="stAlertContentSuccess"] p {
+        color: #000000 !important;  /* black text */
+    }
+
+    /* Optional: make warning background light yellow */
+    .stAlert[data-testid="stAlert"] {
+        background-color: #fffacd !important;  /* light yellow */
+    }
+
+    /* Optional: make error background light pink */
+    .stAlert[data-testid="stAlert"][role="alert"][data-baseweb="notification"][class*="stAlertContainer"] {
+        background-color: #ffe4e1 !important;  /* light pink */
+    }
+
 
     </style>
 """, unsafe_allow_html=True)
-
 
 
 # ------------------------------------------------------------
