@@ -139,11 +139,12 @@ http://localhost:8501
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author  
+**Kevin Manjila**  
+Machine Learning Developer  
 
-**Kevin Manjila**
-Machine Learning Developer
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](www.linkedin.com/in/kevin-manjila)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/kevin-manjila)
+
 
 
 ---
