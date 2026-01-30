@@ -98,18 +98,6 @@ Predict Vessel Hotspot Risk
 
 ---
 
-## 🖥️ **Screenshots**
-
-(Add your app screenshots here)
-Example:
-
-* Heatmap
-* Cluster map
-* Prediction page
-* Raw dataset
-
----
-
 ## 🚀 **How To Run This Project**
 
 ### 1️⃣ Clone the Repository
@@ -155,7 +143,7 @@ http://localhost:8501
 
 **Kevin Manjila**
 Machine Learning Developer
-[LinkedIn Profile](your-linkedin-url)
+[LinkedIn Profile](www.linkedin.com/in/kevin-manjila)
 
 ---
 
