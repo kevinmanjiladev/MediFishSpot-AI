@@ -143,7 +143,8 @@ http://localhost:8501
 
 **Kevin Manjila**
 Machine Learning Developer
-[LinkedIn Profile](www.linkedin.com/in/kevin-manjila)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](www.linkedin.com/in/kevin-manjila)
+
 
 ---
 
