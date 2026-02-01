@@ -193,6 +193,18 @@ st.markdown("""
         background-color: #ffe4e1 !important;  /* light pink */
     }
 
+     /* FIX: Make number_input labels visible again */
+    div[data-testid="stNumberInput"] label p {
+        color: black !important;   /* Blue label text */
+        font-weight: 500 !important;
+        font-size: 18px !important;
+    }
+
+    /* Alternatively black text:
+    div[data-testid="stNumberInput"] label p {
+        color: black !important;
+    }
+    */
 
     </style>
 """, unsafe_allow_html=True)
