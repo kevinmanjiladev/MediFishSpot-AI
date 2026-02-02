@@ -4,4 +4,4 @@ folium
 streamlit-folium
 numpy
 scikit-learn
-pickle5
+
